@@ -1,0 +1,19 @@
+% file used by 
+% identify_hetresidues.m
+% this file contains codes that 
+% enable assignment of spectra to bilins
+% based on the c-teminal sequence of the protein
+% bilins are assigned a numerical code that
+% matches code in the files containing
+% absorption and emission spectra
+% format:
+% AA=protein=binding_site=numerical code
+%--------------------------------------------
+FDFVIGKM=APC=84=1
+FDYIIQFM=APCbottom=84=8
+LDYICSGLS=APCtop=84=2
+LDYAINALS=CPC=84=3
+FDRAAAAVA=CPC=84=4
+FDRAAAAVA=CPC=155=5
+TRELSELS=APCbottom=84=6
+FTPVVKV=APCEbottom=190=7
