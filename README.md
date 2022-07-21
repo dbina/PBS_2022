@@ -1,13 +1,14 @@
 # PBS_2022
 PBS modelling code
+---
 readme version. 2022-07-21 by D.B.
+---
 This set of .m files performs analysis of energy transfer in
-phycobilisome, based on structure saved as .pdb file
+phycobilisome, based on structure saved as .pdb file within the framework of Foerster theory
 the theory behind the computations can be found in the accompanying publication
 [REFERENCE TO THE PAPER HERE, I suppose]
 
-
-this code builds upon the following workflow:
+A. workflow
 1. .pdb is translated to coordinate file (.xyz) of coordinates of c
 arbon atoms of bilins (ascii) and cysteines (these are used to assign the bilin binding)
 
@@ -38,10 +39,10 @@ solver to yield kinetics of excited states. Initial conditionas can be chosen to
 kinetics are saved as text files
 
 6. kinetics can be combined with the spectra (step 3) to simulate transient spectroscopy (fluorescence) data, that can then be 
-processed to yield DAS. Alternatively, DAS can be computed directly from rate constant matrix. However, fitting the simulated data 
+processed to yield decay-associated spectra. Alternatively, DAS can be computed directly using rate constant matrix. However, fitting the simulated data 
 like one would a normal dataset generates more experiment-like DAS directly.  
 
-the scripts used for the workflow steps:
+B. the scripts
 1. pdb2xyz.m
 2. identify_hetresidues.m uses <dictionary_v0.txt> to assign classes to pigments
 pdb_2_seq.m is provided as a tool to convert pdb file to fasta file of protein sequence, so that only pdb is needed as input for the 
@@ -49,11 +50,13 @@ work
 3. generate_sample_spectra_01_boltzmann.m
 4. convert_xyz_to_mRe_vecfile.m
 5. PBS_w_overlaps_and_ode_gill.m 
-(the gill part stands for the option to run a Gillespie algorithm simulation instead of solving ode; this e.g. allows to incorporate
+(the _gill part stands for the option to run a Gillespie algorithm simulation instead of solving ode; this e.g. allows to incorporate
 structural dynamics into the system for stochastic simulation; not used in the origininal publication)
 6. spectra_from_ode.m - outputs the spectra and DAS
 
 notes:
 i) most scripts require that their folder contains a text file <current_path.txt> with a path to the folder where the structure data are stored
+ii) follow comments inside the script code for more explanations
+iii) the scrips were developed as a tool to help analyze a particular dataset, hence run parameters such as file names for output, values of constants, simulation settings etc. are to be input directly into the code
 
 
