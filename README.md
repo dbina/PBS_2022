@@ -1,6 +1,6 @@
-# PBS_2022
-# PBS modelling code
-# readme version. 2022-07-21 by D.B.
+PBS_2022
+PBS modelling code
+readme version. 2022-07-21 by D.B.
 
 This set of .m files performs analysis of energy transfer in
 phycobilisome, based on structure saved as .pdb file within the framework of Foerster theory
