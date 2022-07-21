@@ -29,8 +29,8 @@ to find the geometrical axis of the conjugated system
 same approach is used to extract dipole for the carotenoids; which atoms to use was determined manually by inspection of the pigment 
 .pdb structure, therefore two different scripts exist, one for bilins, the other for carotenoids
 the mRe are saved as <*_vecdata.txt> files that are hen loaded and processed to compute dipole couplings etc.
-also generated is a file <index_....txt> which contains numerical codes for spectral classes of pigments
-so that a line in the mRe matrix corresponds to a line in the index_ file
+also generated is a file <..._index.txt> which contains numerical codes for spectral classes of pigments
+so that a line in the mRe matrix corresponds to a line in the 'index' file
 
 5. mRe are loaded from the files and used to compute dipole-dipole couplings using the dipole corrdinates and sizes, combined with 
 overlaps these give the transfer rates. Resulting matrix of pairwise rate constants is fed into the ordinary differential equation 
@@ -43,7 +43,7 @@ like one would a normal dataset generates more experiment-like DAS directly.
 
 the scripts used for the workflow steps:
 1. pdb2xyz.m
-2. identify_hetresidues.m
+2. identify_hetresidues.m uses <dictionary_v0.txt> to assign classes to pigments
 pdb_2_seq.m is provided as a tool to convert pdb file to fasta file of protein sequence, so that only pdb is needed as input for the 
 work
 3. generate_sample_spectra_01_boltzmann.m
