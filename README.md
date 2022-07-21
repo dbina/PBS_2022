@@ -49,11 +49,15 @@ work
 4. convert_xyz_to_mRe_vecfile(_car).m
 5. PBS_w_overlaps_and_ode_gill.m 
 (the _gill part stands for the option to run a Gillespie algorithm simulation instead of solving ode; this e.g. allows to incorporate
-structural dynamics into the system for stochastic simulation; not used in the origininal publication)
+structural dynamics into the system for stochastic simulation; not used in the original publication)
+this script contains the actual simulation code; the steps 1-4 have to be run only once to generate the vector files,spectra and indexes
+it outputs the excited state concentrations as a function of time and, as an option the matrix of the pairwise rate constants for the whole pigment system
+
 6. spectra_from_ode.m - outputs the spectra and DAS
 
 notes:
 i) most scripts require that their folder contains a text file <current_path.txt> with a path to the folder where the structure data are stored
 ii) follow comments inside the script code for more explanations
-iii) the scrips were developed as a tool to help the author analyze a particular dataset, hence with minimal consideration for user interfacing, consequently parameters such as file names for output, values of constants, simulation settings etc. are to be input directly into the code
+iii) the scrips were developed as a tool to help its author analyze a particular dataset, hence with minimal consideration for user interfacing, consequently parameters such as file names for output, values of constants, simulation settings etc. are to be input directly into the code
+and optional functionality is achieved by commenting/uncomenting section of code
 
